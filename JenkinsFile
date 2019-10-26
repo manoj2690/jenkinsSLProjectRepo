@@ -19,13 +19,13 @@ pipeline {
 		stage('Build') {
 			steps{
 				echo  'Build = calling shared lib method'
-				
-				 def command = 'java -version'
-				
-				echo  '>>>>>> shell = $command'
-				
-				build(command)
-				
+				 script {
+						 def command = 'java -version'
+						
+						echo  '>>>>>> shell = $command'
+						
+						build(command)
+				}
 				echo 'end build stage'
 			}
 		}
