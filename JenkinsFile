@@ -8,16 +8,17 @@ pipeline {
 	
 	stages {
 		stage('Build') {
-			
-			println 'Build = calling shared lib method'
-			
-			def command = 'mvn --help'
-			
-			println '>>>>>> shell = ' + '$command'
-			
-			build(command)
-			
-			println 'end build stage'
+			steps{
+				echo  'Build = calling shared lib method'
+				
+				 def command = 'java -version'
+				
+				echo  '>>>>>> shell = $command'
+				
+				build(command)
+				
+				echo 'end build stage'
+			}
 		}
 	}
 }
