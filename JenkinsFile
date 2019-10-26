@@ -6,12 +6,10 @@ libraries{
 pipeline {
 	agent any
 	
-
 	stages {
 		stage('Build') {
-			steps { echo 'Building..' }
 			
-			echo 'calling shared lib method'
+			echo 'Build = calling shared lib method'
 			
 			def command = 'mvn --help'
 			
