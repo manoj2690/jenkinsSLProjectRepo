@@ -1,9 +1,11 @@
-libraries{
-
-	lib('sharedlibrepo/sharedlibs')
-}
 
 pipeline {
+
+	libraries{
+	
+		lib('sharedlibrepo/sharedlibs')
+	}
+
 	agent any
 	
 	stages {
