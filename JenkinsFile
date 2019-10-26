@@ -7,6 +7,15 @@ pipeline {
 	agent any
 	
 	stages {
+		stage('init') {
+			steps{
+			
+				echo 'git checkout...........'
+				
+				git credentialsId: '792290f7-2e2a-4e88-9fe1-b25016cf259f', url: 'https://github.com/manoj2690/jenkinsSLProjectRepo.git'
+
+			}
+		}
 		stage('Build') {
 			steps{
 				echo  'Build = calling shared lib method'
