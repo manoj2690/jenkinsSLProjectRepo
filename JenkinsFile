@@ -3,7 +3,7 @@ pipeline {
 
 	libraries{
 	
-		lib('mysharedlibs')
+		lib('mysharedlibs/sharedlibs')
 	}
 
 	agent any
