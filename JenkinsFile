@@ -1,0 +1,24 @@
+pipeline {
+	agent any
+	
+	libraries{
+	
+		lib('sharedlibrepo/sharedlibs')
+	}
+
+	stages {
+		stage('Build') {
+			steps { echo 'Building..' }
+			
+			echo 'calling shared lib method'
+			
+			def command = 'mvn --help'
+			
+			echo '>>>>>> shell = ' + '$command'
+			
+			build(command)
+			
+			echo 'end build stage'
+		}
+	}
+}
